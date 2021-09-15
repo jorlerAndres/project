@@ -18,8 +18,8 @@ $app->group('', function (RouteCollectorProxy $group) {
 
 $app->group('/api', function (RouteCollectorProxy $group) {
 
-    $group->post('/dashboard', 'App\Controllers\DashboardController:operationExcel')->setName('operationExcel');
+    $group->post('/tareas', 'App\Controllers\TareasController:getTareas')->setName('getTareas');
     $group->post('/informe', 'App\Controllers\InformeController:operationExcel')->setName('operation');
-    $group->get('/descarga/{empresa}/{tipo}/{ano}/{archivo}[/{mes}]', 'App\Controllers\DescargaController:operationDescarga')->setName('descarga');
+   
     
 })->add('App\Middleware\LoginMiddleware');

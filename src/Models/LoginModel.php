@@ -30,7 +30,7 @@ class LoginModel extends BaseModel
             $res["id"] = $_SESSION['id_usuario'];
             $res["alert"] = "success";
             $res["mensaje"] = "Te damos la bienvenida!";
-            (new Logs())->regLog(1, 'Ingreso','Login');
+            //(new Logs())->regLog(1, 'Ingreso','Login');
         }else{
 
             $res["alert"] = "danger";
@@ -42,7 +42,7 @@ class LoginModel extends BaseModel
 
     public function logout(){
 
-        (new Logs())->regLog(2, 'Salida','Login');
+        //(new Logs())->regLog(2, 'Salida','Login');
         session_destroy();
     }
 

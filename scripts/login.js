@@ -12,7 +12,7 @@ btnEnviarFormulario.addEventListener('click',e=>{
 async function validar(userForm,passwordForm){  
     let user=userForm.value
     let contrasena=passwordForm.value
-  console.log(host);
+  console.log("hhh"+host);
     try {
          const formData = new FormData();
          formData.append('user',user);
@@ -22,7 +22,7 @@ async function validar(userForm,passwordForm){
             method: 'POST',
             body: formData,
           });
-          console.log(res);
+          console.log("gggggg"+res);
         const data = await res.json();
         console.log(data);
         const {id}=data;
